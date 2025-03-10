@@ -1,0 +1,13 @@
+<h1>Count:{{count}}</h1>
+<button (click)="increment()"> + </button> &nbsp;
+<button (click)="decrement()"> - </button><br>
+<input type="checkbox" [(ngModel)]="show">
+<h1 [ngClass]="{'colour':show}">This is fruits list:</h1>
+<li *ngFor="let fruit of fruits; let i=first; let j=last">
+    <strong *ngIf="i">first:{{ fruit | uppercase}}></strong>
+    <strong *ngIf="j">last:{{ fruit| uppercase }}</strong>
+    {{fruit | slice:0:4}}
+</li>
+
+<p appHighlight apHighligt="">Hover me</p>
+    
